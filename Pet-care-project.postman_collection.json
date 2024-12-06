@@ -872,7 +872,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9192/api/v1/vets/search_vets?speciality=애견비뇨&date=2024-12-09&time=13:00",
+							"raw": "http://localhost:9192/api/v1/vets/search_vets?speciality=pet_dentist&date=2024-12-10&time=16:00",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -887,15 +887,15 @@
 							"query": [
 								{
 									"key": "speciality",
-									"value": "애견비뇨"
+									"value": "pet_dentist"
 								},
 								{
 									"key": "date",
-									"value": "2024-12-09"
+									"value": "2024-12-10"
 								},
 								{
 									"key": "time",
-									"value": "13:00"
+									"value": "16:00"
 								}
 							]
 						}
