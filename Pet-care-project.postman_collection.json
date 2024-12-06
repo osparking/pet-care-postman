@@ -1,0 +1,908 @@
+{
+	"info": {
+		"_postman_id": "5f8c25c6-e039-493d-a917-57a0c2a2e63c",
+		"name": "Pet-care-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2382581",
+		"_collection_link": "https://speeding-crescent-635395.postman.co/workspace/My-Workspace~c4143464-8619-4485-b149-ad17e68f9b17/collection/2382581-5f8c25c6-e039-493d-a917-57a0c2a2e63c?action=share&source=collection_link&creator=2382581"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "1. register - vet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"소\",\r\n    \"lastName\": \"황\",\r\n    \"gender\": \"male\",\r\n    \"phoneNumber\" : \"01023232323\",\r\n    \"email\": \"hwang@email.com\",\r\n    \"password\": \"1234\",\r\n    \"isUsable\": true,\r\n    \"userType\" : \"VET\",\r\n    \"specialization\": \"외과수술\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9192/api/v1/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1. register - admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"소\",\r\n    \"lastName\": \"황\",\r\n    \"gender\": \"male\",\r\n    \"phoneNumber\" : \"01023232323\",\r\n    \"email\": \"hwang@email.com\",\r\n    \"password\": \"1234\",\r\n    \"isUsable\": true,\r\n    \"userType\" : \"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9192/api/v1/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1. register - patient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"소녀\",\r\n    \"lastName\": \"정\",\r\n    \"gender\": \"female\",\r\n    \"phoneNumber\" : \"01023235555\",\r\n    \"email\": \"jungsn@email.com\",\r\n    \"password\": \"1234\",\r\n    \"isUsable\": true,\r\n    \"userType\" : \"PATIENT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9192/api/v1/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2. update_vet",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"미자\",\r\n    \"lastName\": \"김\",\r\n    \"gender\": \"Female\",\r\n    \"phoneNumber\" : \"01023235151\",\r\n    \"specialization\": \"피부과\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9192/api/v1/users/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3. find user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9192/api/v1/users/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5. read all user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9192/api/v1/users/get_all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"get_all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4. delete user by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9192/api/v1/users/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "appointment",
+			"item": [
+				{
+					"name": "update appointment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2024-10-14\",\r\n    \"time\": \"10:35\",\r\n    \"reason\": \"그루보고 짖는 원인 문의\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9192/api/v1/appointments/3/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"appointments",
+								"3",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "book appointment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2024-10-12\",\r\n    \"time\": \"13:20\",\r\n    \"reason\": \"많이 빠지는 털 원인 규명\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9192/api/v1/appointments/create?senderId=2&recipientId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"appointments",
+								"create"
+							],
+							"query": [
+								{
+									"key": "senderId",
+									"value": "2"
+								},
+								{
+									"key": "recipientId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "book appointment - v2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2024-10-12\",\r\n    \"time\": \"13:20\",\r\n    \"reason\": \"많이 빠지는 털 원인 규명\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9192/api/v1/appointments/create?senderId=2&recipientId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"appointments",
+								"create"
+							],
+							"query": [
+								{
+									"key": "senderId",
+									"value": "2"
+								},
+								{
+									"key": "recipientId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get appointment by Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2024-10-14\",\r\n    \"time\": \"10:35\",\r\n    \"reason\": \"그루보고 짖는 원인 문의\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9192/api/v1/appointments/4/get_id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"appointments",
+								"4",
+								"get_id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete appointment by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9192/api/v1/appointments/3/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"appointments",
+								"3",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all appointment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9192/api/v1/appointments/get_all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"appointments",
+								"get_all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get appointment by no",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9192/api/v1/appointments/1947560391/get_no",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"appointments",
+								"1947560391",
+								"get_no"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "book appointment - v2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"appointment\": {\r\n        \"date\": \"2024-10-14\",\r\n        \"time\": \"11:00\",\r\n        \"reason\": \"심장사상충약 수령\"\r\n    },\r\n    \"pets\": [\r\n        {\r\n            \"name\": \"구름이\",\r\n            \"type\": \"개\",\r\n            \"color\": \"힌색\",\r\n            \"breed\": \"보더믹스\",\r\n            \"age\": \"4\"\r\n        },\r\n        {\r\n            \"name\": \"봉수\",\r\n            \"type\": \"개\",\r\n            \"color\": \"암갈색\",\r\n            \"breed\": \"푸들\",\r\n            \"age\": \"1\"\r\n        },\r\n        {\r\n            \"name\": \"보리\",\r\n            \"type\": \"개\",\r\n            \"color\": \"아이보리\",\r\n            \"breed\": \"말티즈\",\r\n            \"age\": \"12\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9192/api/v1/appointments/create?senderId=2&recipientId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"appointments",
+								"create"
+							],
+							"query": [
+								{
+									"key": "senderId",
+									"value": "2"
+								},
+								{
+									"key": "recipientId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pet",
+			"item": [
+				{
+					"name": "1. find pet by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9192/api/v1/pets/1/get_id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"pets",
+								"1",
+								"get_id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2. update pet by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"구름\",\r\n    \"type\": \"개\",\r\n    \"color\": \"아이보리\",\r\n    \"breed\": \"보더피츠\",\r\n    \"age\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9192/api/v1/pets/1/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"pets",
+								"1",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3. delete pet by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9192/api/v1/pets/3/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"pets",
+								"3",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "photo",
+			"item": [
+				{
+					"name": "upload_new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/D:/study/fullstack/react/images/girl_1.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9192/api/v1/photos/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"photos",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete by User Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/D:/study/fullstack/react/images/girl_1.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9192/api/v1/photos/1/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"photos",
+								"1",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/D:/study/fullstack/react/images/beauty.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9192/api/v1/photos/1/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"photos",
+								"1",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9192/api/v1/photos/1/get_id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"photos",
+								"1",
+								"get_id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "review",
+			"item": [
+				{
+					"name": "write review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\": \"나는 이런 저런 이유로 별 네개를 주었다.\",\r\n    \"stars\": \"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9192/api/v1/reviews/create?patientId=2&vetId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"reviews",
+								"create"
+							],
+							"query": [
+								{
+									"key": "patientId",
+									"value": "2"
+								},
+								{
+									"key": "vetId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update review",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\": \"알고보니, 이 수의사는 쵝오다.\",\r\n    \"stars\": \"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9192/api/v1/reviews/3/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"reviews",
+								"3",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete review",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\": \"알고보니, 이 수의사는 쵝오다.\",\r\n    \"stars\": \"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9192/api/v1/reviews/4/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"reviews",
+								"4",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all review by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9192/api/v1/reviews/1/get_user_id?page=0&size=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"reviews",
+								"1",
+								"get_user_id"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vet",
+			"item": [
+				{
+					"name": "1. find all vets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9192/api/v1/vets/get_all_vets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"vets",
+								"get_all_vets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1. find vet - spec, date, time Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9192/api/v1/vets/search_vets?speciality=애견비뇨&date=2024-12-09&time=13:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"api",
+								"v1",
+								"vets",
+								"search_vets"
+							],
+							"query": [
+								{
+									"key": "speciality",
+									"value": "애견비뇨"
+								},
+								{
+									"key": "date",
+									"value": "2024-12-09"
+								},
+								{
+									"key": "time",
+									"value": "13:00"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
